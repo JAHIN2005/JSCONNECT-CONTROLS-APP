@@ -34,7 +34,7 @@ const LoginScreen: React.FC<{ onLogin: (code: string) => void; isLoading: boolea
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-1" htmlFor="code">Authorisation Code</label>
+          <label className="block text-sm font-medium text-gray-300 mb-1" htmlFor="code">Authorization Code</label>
           <input
             id="code"
             type="password"
@@ -91,7 +91,7 @@ const App: React.FC = () => {
             sessionStorage.setItem('isAuthenticated', 'true');
             setIsAuthenticated(true);
         } else {
-            setAuthError('Invalid Authorisation Code.');
+            setAuthError('Invalid Authorization Code.');
         }
         setIsLoading(false);
     }, 300);
