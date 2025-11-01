@@ -1,12 +1,20 @@
 // A unique name for the cache
-const CACHE_NAME = 'jsconnect-cache-v1';
+const CACHE_NAME = 'jsconnect-cache-v2'; // Incremented cache version
 
 // A list of files to cache for offline use
 const URLS_TO_CACHE = [
   './',
   './index.html',
   './icon.svg',
-  './manifest.json'
+  './manifest.json',
+  './index.tsx',
+  './App.tsx',
+  './types.ts',
+  './hooks/useRobotAPI.ts',
+  './components/Controller.tsx',
+  './components/SettingsModal.tsx',
+  './components/ControlButton.tsx',
+  './components/ActionButton.tsx'
 ];
 
 // Install event: opens the cache and adds the core files to it.
