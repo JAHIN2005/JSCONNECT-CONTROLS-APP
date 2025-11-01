@@ -4,7 +4,10 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
+    const repoName = 'JSCONNECT-CONTROLS-APP'; // From your GitHub Pages URL
+
     return {
+      base: `/${repoName}/`, // IMPORTANT for GitHub Pages deployment
       server: {
         port: 3000,
         host: '0.0.0.0',
