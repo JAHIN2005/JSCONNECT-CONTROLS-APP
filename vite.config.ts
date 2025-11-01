@@ -4,10 +4,11 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
-    const repoName = 'JSCONNECT-CONTROLS-APP'; // From your GitHub Pages URL
+    const repoName = 'JSCONNECT-CONTROLS-APP';
+    const isProduction = mode === 'production';
 
     return {
-      base: `/${repoName}/`, // IMPORTANT for GitHub Pages deployment
+      base: isProduction ? `/${repoName}/` : '/',
       server: {
         port: 3000,
         host: '0.0.0.0',
@@ -19,7 +20,6 @@ export default defineConfig(({ mode }) => {
       },
       resolve: {
         alias: {
-          // Fix: __dirname is not available in ES modules. Use process.cwd() instead.
           '@': path.resolve(process.cwd(), '.'),
         }
       }
