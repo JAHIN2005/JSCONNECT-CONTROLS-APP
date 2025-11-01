@@ -3,10 +3,10 @@ const CACHE_NAME = 'jsconnect-cache-v1';
 
 // A list of files to cache for offline use
 const URLS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/icon.svg',
-  '/manifest.json'
+  './',
+  './index.html',
+  './icon.svg',
+  './manifest.json'
 ];
 
 // Install event: opens the cache and adds the core files to it.
