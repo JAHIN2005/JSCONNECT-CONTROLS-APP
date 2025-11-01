@@ -16,7 +16,8 @@ export default defineConfig(({ mode }) => {
       },
       resolve: {
         alias: {
-          '@': path.resolve(__dirname, '.'),
+          // Fix: __dirname is not available in ES modules. Use process.cwd() instead.
+          '@': path.resolve(process.cwd(), '.'),
         }
       }
     };
